@@ -3,7 +3,7 @@ function Data() {
     ' ': '/',
     'emp': 'e',
     'A': '.-',  
-    'B': '-...',  
+    'B': '-...',   
     'C': '-.-.',
     'D': '-..',  
     'E': '.',  
@@ -41,13 +41,13 @@ function Data() {
     '9': '----.'
   }
   wordsData = [
-    ["I", "You", "He", "She", "It", "We", "You", "They"],
-    ["am", "is", "are", "attack", "attacks", "eat", "eats"],
+    ["you", "he", "she", "it", "we", "you", "they"],
+    ["is", "are", "attack", "attacks", "eat", "eats"],
     ["my", "your", "its", "a", "an", "the"],
     ["ant", "dog", "cat", "buddy", "skeleton", "computer", "house", "giraffe", "balcony", "flower", "pet"],
     ["which", "who", "that"],
-    ["am", "is", "are"],
-    ["my", "your", "its", "a", "an", "the"],
+    ["is", "are"],
+    ["my", "your", "its", "a", "an", "the"], 
     ["apple", "story", "knife", "pet", "watermelon", "chicken"]
   ]
   this.setUpMorseCode = () => {
@@ -60,6 +60,7 @@ function Data() {
     //change words to morse code
     wordsText = wordsText.toUpperCase();
     for(let i = 0; i < wordsText.length; i++) {
+      //tempString = tempString.toUpperCase();
       morseText += letters[wordsText[i]];
       i != wordsText.length - 1 ? morseText += " " : 0;
     }

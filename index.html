@@ -3,7 +3,17 @@
 <head>
   <title>Morse Code to Words</title>
   <style>
-    #main {
+    p{
+      font-size: 40px;
+    }
+    span {
+      font-size: 20px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    #main { 
       width: 100%;
       margin-top: 100px;
       text-align: center;
@@ -19,11 +29,12 @@
       height:100%;
       font-size: 20px;
     }
-    #checkWords {
+    #result {
       margin-top: 20px;
       background-color: yellow;
-      width: 100px;
       height: 50px;
+      position:relative;
+      bottom: 20px;
     }
     #restart {
       margin-top: 20px;
@@ -31,17 +42,33 @@
       width: 100px;
       height: 50px;
     }
+    #correct {
+      width: 50px;
+      height: 50px;
+      display: none;
+    }
+    #incorrect {
+      width: 50px;
+      height: 50px;
+      display: none;
+    }
   </style>  
 </head>
 <body onload = "start();">
   <div id="main">
     <p>Hear Morse Code</p>
-    <img id="soundIC" src="soundIcon.JPG">
+    <img id="soundIC" src="sound.png" onclick = "playSounds();">
+    <img id="soundIC" src="restart.png" onclick = "start();">
     <div id="mainDiv">
-      <input type="text" id="wordsInp" name="wordsInp" placeholder="Enter your words">
+      <input type="text" id="wordsInp" name="wordsInp" placeholder="Enter your words...">
     </div>
-    <button id="checkWords">Check</button>
-    <button id="restart">Restart</button>
+    <img style="margin-top: 40px;width: 150px; height: 50px;" src="submit.jpg" onclick = "checkResult();">
+    <button id="result">
+      <span>result: </span>
+      <span id ="resultPlace">_______________________</span>
+    </button>
+    <img src="correct.png" id="correct">
+    <img src="incorrect.png" id="incorrect">
   </div>
   <script src="data.js"></script>
   <script src="script.js"></script>
