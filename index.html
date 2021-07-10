@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morse Code to Words</title>
+  <style>
+    #main {
+      width: 100%;
+      margin-top: 100px;
+      text-align: center;
+    }
+    #mainDiv {
+      margin: auto;
+      background-color: red;
+      width: 500px;
+      height: 300px;  
+    }
+    #wordsInp {
+      width: 100%;
+      height:100%;
+      font-size: 20px;
+    }
+    #checkWords {
+      margin-top: 20px;
+      background-color: yellow;
+      width: 100px;
+      height: 50px;
+    }
+    #restart {
+      margin-top: 20px;
+      background-color: greenyellow;
+      width: 100px;
+      height: 50px;
+    }
+  </style>  
 </head>
-<body>
-  
+<body onload = "start();">
+  <div id="main">
+    <p>Hear Morse Code</p>
+    <img id="soundIC" src="soundIcon.JPG">
+    <div id="mainDiv">
+      <input type="text" id="wordsInp" name="wordsInp" placeholder="Enter your words">
+    </div>
+    <button id="checkWords">Check</button>
+    <button id="restart">Restart</button>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
