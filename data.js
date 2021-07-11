@@ -46,11 +46,12 @@ function Data() {
     ["my", "your", "its", "a", "an", "the"],
     ["ant", "dog", "cat", "buddy", "skeleton", "computer", "house", "giraffe", "balcony", "flower", "pet"],
     ["which", "who", "that"],
-    ["is", "are"],
+    ["is", "are", "use", "uses", "tell", "tells"],
     ["my", "your", "its", "a", "an", "the"], 
     ["apple", "story", "knife", "pet", "watermelon", "chicken"]
   ]
   this.setUpMorseCode = () => {
+    //get the ramdom words to create a sentence
     for(let i = 0 ; i < wordsData.length; i++) {
       wordsText += wordsData[i][random(wordsData[i].length)] + " ";
     }
@@ -60,7 +61,6 @@ function Data() {
     //change words to morse code
     wordsText = wordsText.toUpperCase();
     for(let i = 0; i < wordsText.length; i++) {
-      //tempString = tempString.toUpperCase();
       morseText += letters[wordsText[i]];
       i != wordsText.length - 1 ? morseText += " " : 0;
     }
